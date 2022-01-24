@@ -6,38 +6,33 @@ void main() {
       home: MyApp()));
 }
 class MyApp extends StatelessWidget {
-  final images = [AssetImage('assets/1.PNG'),AssetImage('assets/2.PNG'),AssetImage('assets/3.PNG'),const AssetImage('assets/4.PNG'),AssetImage('assets/4.PNG'),AssetImage('assets/4.PNG'),];
+  final images = [AssetImage('assets/1.PNG'),AssetImage('assets/2.PNG'),AssetImage('assets/3.PNG'),const AssetImage('assets/4.PNG'),AssetImage('assets/5.PNG'),AssetImage('assets/6.PNG'),AssetImage('assets/7.PNG'),];
   final List<String> name = <String>[
-    'Bitcoin  ',
-    'Ethereum',
-    'Litecoin ',
-    'Ripple   ',
-    'Ripple   ',
-    'Ripple   ',
-  ];
-  final List<String> percent = <String>[
-    '+1.6%',
-    '-0.82%',
-    '-2.10%',
-    '+0.27%',
-    '+0.27%',
-    '+0.27%',
+    'Дом',
+    'Покупки',
+    'Транспорт',
+    'Здоровье',
+    'Фитнес',
+    'Счета',
+    'Ресторан',
   ];
   final List<String> money = <String>[
-    '\$29,850.15',
-    '\$10,531.24',
-    '\$3,676.76',
-    '\$5,241.62',
-    '\$5,241.62',
-    '\$5,241.62',
+    '\$321',
+    '\$574',
+    '\$124',
+    '\$765',
+    '\$324',
+    '\$762',
+    '\$325',
   ];
   final List<String> xpr = <String>[
-    '2.73 BTC',
-    '47.61 ETH',
-    '39.27 LTC',
-    '16447.65 XRP',
-    '16447.65 XRP',
-    '16447.65 XRP',
+    'Продукты',
+    'Одежда',
+    'Такси',
+    'Лечение',
+    'Тренировки',
+    'Комунальные',
+    'Ужин',
   ];
 
 
@@ -48,32 +43,53 @@ class MyApp extends StatelessWidget {
       backgroundColor: Color.fromRGBO(255, 255, 255, 1),
       body: Column(
         children: [Container(
-          padding: const EdgeInsets.fromLTRB(34, 70, 0, 0),
-          child: Row(
-            children: [
-              Container(
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                child: const Text("Портфолио", style:
+          padding: const EdgeInsets.fromLTRB(0, 70, 0, 0),
+          child: Container(
+                child: const Align(
+                  alignment: Alignment.center,
+                child: Text("Баланс", style:
                 TextStyle(color: Colors.black,
-                    fontSize: 40,
+                    fontSize: 24,
                     fontWeight: FontWeight.bold),
                 ),
-              ),
-              Container(
-                padding: const EdgeInsets.fromLTRB(100, 0, 10, 25),
-                child: const Icon(
-                  FontAwesomeIcons.cog, color: Colors.black26,
-                ),
-              ),
-            ],),
+              ),),
         ),
           Container(
-            padding: const EdgeInsets.fromLTRB(230, 15, 0, 0),
-            child: const Text("посмотреть все", style:
-            TextStyle(color: Colors.redAccent,
-                fontSize: 18),
+            child: const Align(
+              alignment: Alignment.center,
+              child: Text("\$1200.89", style:
+              TextStyle(color: Colors.black,
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold),
+              ),
+            ),),
+          Container(
+            padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+            width: 300,
+            child:Row(
+            children:[
+              Container(
+              child: const Icon(
+                FontAwesomeIcons.angleLeft, color: Colors.black,
+              ),
             ),
-          ),
+              Container(
+                padding: const EdgeInsets.fromLTRB(70, 0, 0, 0),
+                child: const Align(
+              alignment: Alignment.topCenter,
+              child: Text("Апрель 2020", style:
+              TextStyle(color: Colors.black,
+                  fontSize: 20),
+              ),
+            ),),
+              Container(
+                padding: const EdgeInsets.fromLTRB(60, 0, 0, 0),
+                child: const Icon(
+                  FontAwesomeIcons.angleRight, color: Colors.black,
+                ),
+              ),
+
+            ],),),
           Container(
             padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
             child: SingleChildScrollView(
@@ -81,15 +97,16 @@ class MyApp extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   SizedBox(
-                    height: 580,
+                    height: 510,
                     width: 350,
+
                     child:Container(
                       color: Colors.white,
                       child: ListView.builder(
-                        itemCount: 6,
+                        itemCount: 7,
                         scrollDirection: Axis.vertical,
                         itemBuilder: (context, index) => Container(
-                          height: 90,
+                          height: 65,
                           margin: const EdgeInsets.only(top: 1.0),
                           decoration: const BoxDecoration(
                             color: Colors.white,),
@@ -98,7 +115,7 @@ class MyApp extends StatelessWidget {
                             children: [
                                 Container(
                                   padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                  child: Image(image: images[index],height: 50, width: 50, fit:BoxFit.cover)
+                                  child: Image(image: images[index],height: 40, width: 40, fit:BoxFit.cover)
                                   ),
                               Align(alignment: Alignment.topLeft,
                               child:Container(
@@ -112,15 +129,7 @@ class MyApp extends StatelessWidget {
                                     const TextStyle(color: Colors.black,
                                     fontSize: 24),
 
-                                    ),),
-                                    Container(
-                                      width: 150,
-                                      padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
-                                      child: Text(percent[index], style:
-                                      const TextStyle(color: Colors.black26,
-                                          fontSize: 10),
-
-                                      ),),],
+                                    ),),],
                                 ),
 
                                 ),),
@@ -130,22 +139,22 @@ class MyApp extends StatelessWidget {
                                 child: Column(
                                   children: [
                                     Container(
-                                      padding: const EdgeInsets.fromLTRB(0, 25, 0, 0),
+                                      padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
                                       child:  Align(
                                       alignment: Alignment.centerRight,
                                       child:  Text(money[index], style:
                                       const TextStyle(color: Colors.black,
-                                          fontSize: 18),
+                                          fontSize: 15,fontWeight: FontWeight.bold),
 
                                       ),),),
                                     Container(
-                                      width: 185,
+                                      width: 200,
                                       padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                                       child:  Align(
                                         alignment: Alignment.centerRight,
                                       child:Text(xpr[index], style:
                                       const TextStyle(color: Colors.black26,
-                                          fontSize: 10),),
+                                          fontSize: 15),),
 
                                       ),),],
                                 ),),
@@ -157,20 +166,31 @@ class MyApp extends StatelessWidget {
             ),),
           ],),),
           ),
+          Container(
+            padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+            child: Container(
+              child: const Align(
+                alignment: Alignment.center,
+                child: Text("См. еще", style:
+                TextStyle(color: Colors.black,
+                    fontSize: 15,),
+                ),
+              ),),
+          ),
             ],),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.borderAll,color: Colors.black,),
-            label: '',
+            icon: Icon(Icons.pie_chart_sharp,color: Colors.black,),
+            label: 'Главная',
           ),
           BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.syncAlt),
-            label: '',
+            icon: Icon(FontAwesomeIcons.chartBar),
+            label: 'Отчеты',
           ),
           BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.user),
-            label: '',
+            icon: Icon(FontAwesomeIcons.userAlt),
+            label: 'Профиль',
           ),
         ],
 
