@@ -1,7 +1,7 @@
 # figma3
 
 A new Flutter project.
-![image](https://user-images.githubusercontent.com/63843401/150835769-fddbbc39-659b-470d-a37e-29f99435bf58.png)
+![image](https://user-images.githubusercontent.com/63843401/150835858-0b2553e3-b413-47ce-9e69-23fe98edc29c.png)
 
 
 ## Getting Started
